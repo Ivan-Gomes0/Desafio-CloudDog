@@ -1,0 +1,25 @@
+{
+    "produtos": [
+        {
+        "id": "01",
+        "nome": "mouse",
+        "preco": 10.5,
+        "categoria": "acessorio",
+        "descricao": "Movimenta o cursor do computador"
+        },
+        {
+            "id": "02",
+            "nome": "tela",
+            "preco": 33.9,
+            "categoria": "acessorio",
+            "descricao": ""
+        },
+        {
+            "id": "03",
+            "nome": "celular",
+            "preco": 1000.5,
+            "categoria": "acessorio",
+            "descricao": "MServe pra muita coisa"
+        }
+]
+}

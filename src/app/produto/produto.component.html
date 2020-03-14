@@ -1,0 +1,120 @@
+<!--<div class="col-lg-10 ">
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <button class="btn btn-outline-success" type="button">Adicionar</button>
+      </form>
+    </nav>
+    <h5>Produtos</h5>
+    <ul class="list-group borderbottom" *ngFor="let produto of produto$ | async">
+      <li class="list-group-item">
+        {{ produto.titulo }}  <span style="padding-left: 10px;">{{ produto.categoria }}</span> <span style="padding-left: 10px;">{{ produto.preco }}</span> <span><a href="#" class="badge">Delete</a> <a href="#" class="badge"> Edit</a></span>
+      </li>
+    </ul>                                            
+</div>
+-->
+
+<div class="mt-3"></div>
+    <div class="card-header">
+      <div class="float-left">
+        <h4>Produtos</h4>
+      </div>
+      <div class="float-right">
+        <button type="button" class="btn btn-primary" [routerLink]="['novo']">Adicionar</button>
+        <button type="button" class="btn btn-secondary">Atualizar</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" >
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>categoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produto">
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.preco }}</td>
+            <td>{{ produto.categoria }}</td>
+            <td>{{ produto.descricao }}</td>
+            <td>
+              <span class="float-right">
+                <button class="btn .btn-outline-dark mb-1 btn-sm">
+                  Editar
+                </button>
+  
+                <button class="btn btn-outline-dark mb-1 btn-sm">
+                  Remover
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  
+  <!--
+  <div class="card mt-3">
+    <div class="card-header">
+      <div class="float-left">
+        <h4>Cursos</h4>
+      </div>
+      <div class="float-right">
+        <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo Curso</button>
+        <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" >
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Curso</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produtos">
+            <td>{{ produto.titulo }}</td>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.categoria }}</td>
+            <td>
+              <span class="float-right">
+                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(produto.id)">
+                  Atualizar
+                </button>
+  
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(prouto)">
+                  Remover
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <ng-template #loading>
+        <span>Carregando Cursos...</span>
+      </ng-template>
+  
+      -ng-template #loadingError>
+        <div *ngIf="error$ | async; else loading" >
+          Erro ao carregar cursos. Tente novamente mais tarde.
+        </div>
+        <ng-template #loading>
+            <span>Carregando Cursos...</span>
+        </ng-template>
+      </ng-template
+    </div>
+  </div>
+  -->
+  <!--
+  <ng-template #deleteModal>
+    <div class="modal-body text-center">
+      <p>Tem certeza que deseja remover esse curso?</p>
+      <button type="button" class="btn btn-default" (click)="onConfirmDelete()">Sim</button>
+      <button type="button" class="btn btn-primary" (click)="onDeclineDelete()">Nao</button>
+    </div>
+  </ng-template> -->
